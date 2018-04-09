@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Test_ScenarioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="HISTORY">
+    <Key>
+      <PropertyRef Name="M_PoolID" />
+      <PropertyRef Name="M_LoanID" />
+      <PropertyRef Name="ReportDate" />
+    </Key>
+    <Property Name="M_PoolID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="M_LoanID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ReportDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CurrentPrincipalBalance" Type="Double" />
+    <Property Name="CurrentLTV" Type="Double" />
+    <Property Name="LoanAge" Type="Double" />
+    <Property Name="CurrentPropertyVal" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Savings" Type="Double" />
+    <Property Name="CurrentIndexedLTV" Type="Double" />
+    <Property Name="DelinquencyStatus" Type="Double" />
+    <Property Name="BorrowerExposure" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="NoBorrowers" Type="Int32" />
+  </EntityType>
+  <EntityType Name="HISTORY_RATES">
+    <Key>
+      <PropertyRef Name="M_PoolID" />
+      <PropertyRef Name="M_LoanID" />
+      <PropertyRef Name="ReportDate" />
+    </Key>
+    <Property Name="M_PoolID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="M_LoanID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ReportDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CurrentRateType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentInterestRate" Type="Double" />
+    <Property Name="CurrentDTI" Type="Double" />
+    <Property Name="CurrentLTFV" Type="Double" />
+  </EntityType>
+  <EntityType Name="INCOME">
+    <Key>
+      <PropertyRef Name="M_PoolID" />
+      <PropertyRef Name="M_LoanID" />
+    </Key>
+    <Property Name="M_PoolID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="M_LoanID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DTI" Type="Double" />
+    <Property Name="LTI" Type="Double" />
+    <Property Name="SelfCertification" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="EmploymentStatus" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="TotalIncome" Type="Double" />
+    <Property Name="BorrowerBirthDate" Type="DateTime" Precision="0" />
+    <Property Name="IndexedDTI" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="IndexedLTI" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="IndexedTotalIncome" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="MaxBorrowerIncome" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="BorrowerTotalIncome" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="LivingExpenses" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="CurrentInterestShock" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="MonthlyNetIncome" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="MonthlyMortgageInterest" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="MonthlyMortgagePrincipal" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="MonthlyIncomeBuffer" Type="Decimal" Precision="15" Scale="2" />
+  </EntityType>
+  <EntityType Name="MASTER">
+    <Key>
+      <PropertyRef Name="M_PoolID" />
+      <PropertyRef Name="M_LoanID" />
+    </Key>
+    <Property Name="M_PoolID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="M_LoanID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="M_BorrowerID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ClassType" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="OriginalPrincipalBalance" Type="Double" />
+    <Property Name="LoanOriginationDate" Type="DateTime" Precision="0" />
+    <Property Name="MaturityDate" Type="DateTime" Precision="0" />
+    <Property Name="TermToMaturity" Type="Double" />
+    <Property Name="Guarantee" Type="Double" />
+    <Property Name="LoanTypeIndicator" Type="Int32" />
+    <Property Name="Sector" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MORTGAGE">
+    <Key>
+      <PropertyRef Name="M_PoolID" />
+      <PropertyRef Name="M_LoanID" />
+    </Key>
+    <Property Name="M_PoolID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="M_LoanID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BTLStatus" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="RepaymentType" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="SecondLien" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="RATE">
+    <Key>
+      <PropertyRef Name="M_PoolID" />
+      <PropertyRef Name="M_LoanID" />
+    </Key>
+    <Property Name="M_PoolID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="M_LoanID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ReversionaryDate" Type="DateTime" Precision="0" />
+    <Property Name="InterestStartDate" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="RemainingFixedRateTerm" Type="Double" />
+    <Property Name="PrincipalStartDate" Type="DateTime" Precision="0" />
+    <Property Name="OriginalFixedRateTerm" Type="Double" />
+  </EntityType>
+  <EntityType Name="SECURITIZATION">
+    <Key>
+      <PropertyRef Name="M_PoolID" />
+      <PropertyRef Name="M_LoanID" />
+    </Key>
+    <Property Name="M_PoolID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="M_LoanID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LifetimeBasePD" Type="Double" />
+    <Property Name="LifetimeBasePDOverride" Type="Double" />
+    <Property Name="Multiple_NEW" Type="Double" />
+    <Property Name="LifetimeBasePPOverride" Type="Double" />
+  </EntityType>
+  <EntityType Name="VALUATION">
+    <Key>
+      <PropertyRef Name="M_PoolID" />
+      <PropertyRef Name="M_LoanID" />
+    </Key>
+    <Property Name="M_PoolID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="M_LoanID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OriginalPropertyValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PropertyValuationDate" Type="DateTime" Precision="0" />
+    <Property Name="OriginalLTV" Type="Double" />
+    <Property Name="OriginalLTFV" Type="Double" />
+    <Property Name="OriginalForeclosureValue" Type="Double" />
+    <Property Name="IndexedLTFV" Type="Double" />
+    <Property Name="CurrentForeclosureValue" Type="Double" />
+    <Property Name="CurrentPropertyValue" Type="Double" />
+    <Property Name="CurrentNetPropertyValue" Type="Double" />
+    <Property Name="ForeclosureResidualDebtEstimate" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="LoanLossEstimate" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="LoanPrice" Type="Double" />
+  </EntityType>
+  <EntityContainer Name="Test_ScenarioEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="HISTORies" EntityType="Self.HISTORY" />
+    <EntitySet Name="HISTORY_RATES" EntityType="Self.HISTORY_RATES" />
+    <EntitySet Name="INCOMEs" EntityType="Self.INCOME" />
+    <EntitySet Name="MASTERs" EntityType="Self.MASTER" />
+    <EntitySet Name="MORTGAGEs" EntityType="Self.MORTGAGE" />
+    <EntitySet Name="RATES" EntityType="Self.RATE" />
+    <EntitySet Name="SECURITIZATIONs" EntityType="Self.SECURITIZATION" />
+    <EntitySet Name="VALUATIONs" EntityType="Self.VALUATION" />
+  </EntityContainer>
+</Schema>

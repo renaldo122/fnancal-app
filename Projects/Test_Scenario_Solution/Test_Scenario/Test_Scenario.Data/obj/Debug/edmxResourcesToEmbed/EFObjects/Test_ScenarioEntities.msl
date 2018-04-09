@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Test_ScenarioModelStoreContainer" CdmEntityContainer="Test_ScenarioEntities">
+    <EntitySetMapping Name="HISTORies">
+      <EntityTypeMapping TypeName="Test_ScenarioModel.HISTORY">
+        <MappingFragment StoreEntitySet="HISTORY">
+          <ScalarProperty Name="M_PoolID" ColumnName="M_PoolID" />
+          <ScalarProperty Name="M_LoanID" ColumnName="M_LoanID" />
+          <ScalarProperty Name="ReportDate" ColumnName="ReportDate" />
+          <ScalarProperty Name="CurrentPrincipalBalance" ColumnName="CurrentPrincipalBalance" />
+          <ScalarProperty Name="CurrentLTV" ColumnName="CurrentLTV" />
+          <ScalarProperty Name="LoanAge" ColumnName="LoanAge" />
+          <ScalarProperty Name="CurrentPropertyVal" ColumnName="CurrentPropertyVal" />
+          <ScalarProperty Name="Savings" ColumnName="Savings" />
+          <ScalarProperty Name="CurrentIndexedLTV" ColumnName="CurrentIndexedLTV" />
+          <ScalarProperty Name="DelinquencyStatus" ColumnName="DelinquencyStatus" />
+          <ScalarProperty Name="BorrowerExposure" ColumnName="BorrowerExposure" />
+          <ScalarProperty Name="NoBorrowers" ColumnName="NoBorrowers" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HISTORY_RATES">
+      <EntityTypeMapping TypeName="Test_ScenarioModel.HISTORY_RATES">
+        <MappingFragment StoreEntitySet="HISTORY_RATES">
+          <ScalarProperty Name="M_PoolID" ColumnName="M_PoolID" />
+          <ScalarProperty Name="M_LoanID" ColumnName="M_LoanID" />
+          <ScalarProperty Name="ReportDate" ColumnName="ReportDate" />
+          <ScalarProperty Name="CurrentRateType" ColumnName="CurrentRateType" />
+          <ScalarProperty Name="CurrentInterestRate" ColumnName="CurrentInterestRate" />
+          <ScalarProperty Name="CurrentDTI" ColumnName="CurrentDTI" />
+          <ScalarProperty Name="CurrentLTFV" ColumnName="CurrentLTFV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INCOMEs">
+      <EntityTypeMapping TypeName="Test_ScenarioModel.INCOME">
+        <MappingFragment StoreEntitySet="INCOME">
+          <ScalarProperty Name="M_PoolID" ColumnName="M_PoolID" />
+          <ScalarProperty Name="M_LoanID" ColumnName="M_LoanID" />
+          <ScalarProperty Name="DTI" ColumnName="DTI" />
+          <ScalarProperty Name="LTI" ColumnName="LTI" />
+          <ScalarProperty Name="SelfCertification" ColumnName="SelfCertification" />
+          <ScalarProperty Name="EmploymentStatus" ColumnName="EmploymentStatus" />
+          <ScalarProperty Name="TotalIncome" ColumnName="TotalIncome" />
+          <ScalarProperty Name="BorrowerBirthDate" ColumnName="BorrowerBirthDate" />
+          <ScalarProperty Name="IndexedDTI" ColumnName="IndexedDTI" />
+          <ScalarProperty Name="IndexedLTI" ColumnName="IndexedLTI" />
+          <ScalarProperty Name="IndexedTotalIncome" ColumnName="IndexedTotalIncome" />
+          <ScalarProperty Name="MaxBorrowerIncome" ColumnName="MaxBorrowerIncome" />
+          <ScalarProperty Name="BorrowerTotalIncome" ColumnName="BorrowerTotalIncome" />
+          <ScalarProperty Name="LivingExpenses" ColumnName="LivingExpenses" />
+          <ScalarProperty Name="CurrentInterestShock" ColumnName="CurrentInterestShock" />
+          <ScalarProperty Name="MonthlyNetIncome" ColumnName="MonthlyNetIncome" />
+          <ScalarProperty Name="MonthlyMortgageInterest" ColumnName="MonthlyMortgageInterest" />
+          <ScalarProperty Name="MonthlyMortgagePrincipal" ColumnName="MonthlyMortgagePrincipal" />
+          <ScalarProperty Name="MonthlyIncomeBuffer" ColumnName="MonthlyIncomeBuffer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MASTERs">
+      <EntityTypeMapping TypeName="Test_ScenarioModel.MASTER">
+        <MappingFragment StoreEntitySet="MASTER">
+          <ScalarProperty Name="M_PoolID" ColumnName="M_PoolID" />
+          <ScalarProperty Name="M_LoanID" ColumnName="M_LoanID" />
+          <ScalarProperty Name="M_BorrowerID" ColumnName="M_BorrowerID" />
+          <ScalarProperty Name="ClassType" ColumnName="ClassType" />
+          <ScalarProperty Name="OriginalPrincipalBalance" ColumnName="OriginalPrincipalBalance" />
+          <ScalarProperty Name="LoanOriginationDate" ColumnName="LoanOriginationDate" />
+          <ScalarProperty Name="MaturityDate" ColumnName="MaturityDate" />
+          <ScalarProperty Name="TermToMaturity" ColumnName="TermToMaturity" />
+          <ScalarProperty Name="Guarantee" ColumnName="Guarantee" />
+          <ScalarProperty Name="LoanTypeIndicator" ColumnName="LoanTypeIndicator" />
+          <ScalarProperty Name="Sector" ColumnName="Sector" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MORTGAGEs">
+      <EntityTypeMapping TypeName="Test_ScenarioModel.MORTGAGE">
+        <MappingFragment StoreEntitySet="MORTGAGE">
+          <ScalarProperty Name="M_PoolID" ColumnName="M_PoolID" />
+          <ScalarProperty Name="M_LoanID" ColumnName="M_LoanID" />
+          <ScalarProperty Name="BTLStatus" ColumnName="BTLStatus" />
+          <ScalarProperty Name="RepaymentType" ColumnName="RepaymentType" />
+          <ScalarProperty Name="SecondLien" ColumnName="SecondLien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RATES">
+      <EntityTypeMapping TypeName="Test_ScenarioModel.RATE">
+        <MappingFragment StoreEntitySet="RATES">
+          <ScalarProperty Name="M_PoolID" ColumnName="M_PoolID" />
+          <ScalarProperty Name="M_LoanID" ColumnName="M_LoanID" />
+          <ScalarProperty Name="ReversionaryDate" ColumnName="ReversionaryDate" />
+          <ScalarProperty Name="InterestStartDate" ColumnName="InterestStartDate" />
+          <ScalarProperty Name="RemainingFixedRateTerm" ColumnName="RemainingFixedRateTerm" />
+          <ScalarProperty Name="PrincipalStartDate" ColumnName="PrincipalStartDate" />
+          <ScalarProperty Name="OriginalFixedRateTerm" ColumnName="OriginalFixedRateTerm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SECURITIZATIONs">
+      <EntityTypeMapping TypeName="Test_ScenarioModel.SECURITIZATION">
+        <MappingFragment StoreEntitySet="SECURITIZATION">
+          <ScalarProperty Name="M_PoolID" ColumnName="M_PoolID" />
+          <ScalarProperty Name="M_LoanID" ColumnName="M_LoanID" />
+          <ScalarProperty Name="LifetimeBasePD" ColumnName="LifetimeBasePD" />
+          <ScalarProperty Name="LifetimeBasePDOverride" ColumnName="LifetimeBasePDOverride" />
+          <ScalarProperty Name="Multiple_NEW" ColumnName="Multiple_NEW" />
+          <ScalarProperty Name="LifetimeBasePPOverride" ColumnName="LifetimeBasePPOverride" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VALUATIONs">
+      <EntityTypeMapping TypeName="Test_ScenarioModel.VALUATION">
+        <MappingFragment StoreEntitySet="VALUATION">
+          <ScalarProperty Name="M_PoolID" ColumnName="M_PoolID" />
+          <ScalarProperty Name="M_LoanID" ColumnName="M_LoanID" />
+          <ScalarProperty Name="OriginalPropertyValue" ColumnName="OriginalPropertyValue" />
+          <ScalarProperty Name="PropertyValuationDate" ColumnName="PropertyValuationDate" />
+          <ScalarProperty Name="OriginalLTV" ColumnName="OriginalLTV" />
+          <ScalarProperty Name="OriginalLTFV" ColumnName="OriginalLTFV" />
+          <ScalarProperty Name="OriginalForeclosureValue" ColumnName="OriginalForeclosureValue" />
+          <ScalarProperty Name="IndexedLTFV" ColumnName="IndexedLTFV" />
+          <ScalarProperty Name="CurrentForeclosureValue" ColumnName="CurrentForeclosureValue" />
+          <ScalarProperty Name="CurrentPropertyValue" ColumnName="CurrentPropertyValue" />
+          <ScalarProperty Name="CurrentNetPropertyValue" ColumnName="CurrentNetPropertyValue" />
+          <ScalarProperty Name="ForeclosureResidualDebtEstimate" ColumnName="ForeclosureResidualDebtEstimate" />
+          <ScalarProperty Name="LoanLossEstimate" ColumnName="LoanLossEstimate" />
+          <ScalarProperty Name="LoanPrice" ColumnName="LoanPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

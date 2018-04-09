@@ -1,0 +1,28 @@
+D:\Application\Open source\ts\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\bin\Debug\Test_Scenario.Core.dll
+D:\Application\Open source\ts\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\bin\Debug\Test_Scenario.Core.pdb
+D:\Application\Open source\ts\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\obj\Debug\Test_Scenario.Core.csproj.CoreCompileInputs.cache
+D:\Application\Open source\ts\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\obj\Debug\Test_Scenario.Core.dll
+D:\Application\Open source\ts\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\obj\Debug\Test_Scenario.Core.pdb
+E:\Test\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\bin\Debug\Test_Scenario.Core.dll
+E:\Test\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\bin\Debug\Test_Scenario.Core.pdb
+E:\Test\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\obj\Debug\Test_Scenario.Core.csproj.CoreCompileInputs.cache
+E:\Test\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\obj\Debug\Test_Scenario.Core.dll
+E:\Test\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\obj\Debug\Test_Scenario.Core.pdb
+E:\Test\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\obj\Debug\Test_Scenario.Core.csprojResolveAssemblyReference.cache
+D:\Application\Open source\12-11-2017\Test 10-12-2017\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\obj\Debug\Test_Scenario.Core.csproj.CoreCompileInputs.cache
+D:\Application\Open source\12-11-2017\Test 10-12-2017\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\obj\Debug\Test_Scenario.Core.dll
+D:\Application\Open source\12-11-2017\Test 10-12-2017\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\obj\Debug\Test_Scenario.Core.pdb
+D:\Application\Open source\12-11-2017\Test 10-12-2017\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\bin\Debug\Test_Scenario.Core.dll
+D:\Application\Open source\12-11-2017\Test 10-12-2017\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\bin\Debug\Test_Scenario.Core.pdb
+E:\Test 10-12-2017\12-11-2017\Test 10-12-2017\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\bin\Debug\Test_Scenario.Core.dll
+E:\Test 10-12-2017\12-11-2017\Test 10-12-2017\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\bin\Debug\Test_Scenario.Core.pdb
+E:\Test 10-12-2017\12-11-2017\Test 10-12-2017\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\obj\Debug\Test_Scenario.Core.csprojResolveAssemblyReference.cache
+E:\Test 10-12-2017\12-11-2017\Test 10-12-2017\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\obj\Debug\Test_Scenario.Core.csproj.CoreCompileInputs.cache
+E:\Test 10-12-2017\12-11-2017\Test 10-12-2017\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\obj\Debug\Test_Scenario.Core.dll
+E:\Test 10-12-2017\12-11-2017\Test 10-12-2017\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\obj\Debug\Test_Scenario.Core.pdb
+E:\CodeField.co\Test_Scenario RenaldoShehaj 12-12-2017\Test_Scenario\Projects\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\bin\Debug\Test_Scenario.Core.dll
+E:\CodeField.co\Test_Scenario RenaldoShehaj 12-12-2017\Test_Scenario\Projects\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\bin\Debug\Test_Scenario.Core.pdb
+E:\CodeField.co\Test_Scenario RenaldoShehaj 12-12-2017\Test_Scenario\Projects\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\obj\Debug\Test_Scenario.Core.csprojResolveAssemblyReference.cache
+E:\CodeField.co\Test_Scenario RenaldoShehaj 12-12-2017\Test_Scenario\Projects\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\obj\Debug\Test_Scenario.Core.csproj.CoreCompileInputs.cache
+E:\CodeField.co\Test_Scenario RenaldoShehaj 12-12-2017\Test_Scenario\Projects\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\obj\Debug\Test_Scenario.Core.dll
+E:\CodeField.co\Test_Scenario RenaldoShehaj 12-12-2017\Test_Scenario\Projects\Test_Scenario_Solution\Test_Scenario\Test_Scenario.Core\obj\Debug\Test_Scenario.Core.pdb

@@ -1,0 +1,88 @@
+﻿@using Chart.Mvc.ComplexChart;
+@using Chart.Mvc.Extensions
+@using Test_Scenario.MVC.HtmlHelpers
+@using Test_Scenario.MVC.ViewModels
+@model ChartsViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<string> labels = new List<string>();
+    List<double> data = new List<double>();
+    List<string> labelsSecond = new List<string>();
+    List<double> dataSecond = new List<double>();
+
+}
+<script type="text/javascript" src="~/Scripts/Chart.js"></script>
+<br/>
+<h1></h1>
+@if (Model != null)
+{
+    foreach (var item in Model.ChartFirst)
+    {
+        labels.Add(item.Year);
+        data.Add(item.TotalCurrentAmount);
+
+    }
+    foreach (var item in Model.ChartSecond)
+    {
+        labelsSecond.Add(item.Year);
+        dataSecond.Add(item.IndexedLTFV);
+    }
+}
+
+@{
+    var barChart = new BarChart();
+    barChart.ComplexData.Labels.AddRange(labels);
+    barChart.ComplexData.Datasets.AddRange(new List<ComplexDataset>
+                             {
+                                new ComplexDataset
+                                    {
+                                        Data = data,
+                                        Label = "My First dataset",
+                                        FillColor = "rgba(220,220,220,0.2)",
+                                        StrokeColor = "rgba(220,220,220,1)",
+                                        PointColor = "rgba(220,220,220,1)",
+                                        PointStrokeColor = "#fff",
+                                        PointHighlightFill = "#fff",
+                                        PointHighlightStroke = "rgba(220,220,220,1)",
+                                    },
+                                //new ComplexDataset
+                                //    {
+                                //        Data = DataSecond,
+                                //        Label = "My Second dataset",
+                                //        FillColor = "rgba(151,187,205,0.2)",
+                                //        StrokeColor = "rgba(151,187,205,1)",
+                                //        PointColor = "rgba(151,187,205,1)",
+                                //        PointStrokeColor = "#fff",
+                                //        PointHighlightFill = "#fff",
+                                //        PointHighlightStroke = "rgba(151,187,205,1)",
+                                //    }
+                            });
+}
+
+<canvas id="myCanvas" width="400" height="400"></canvas>
+@Html.CreateChart("myCanvas", barChart)
+
+
+@{
+    var barChart1 = new BarChart();
+    barChart1.ComplexData.Labels.AddRange(labels);
+    barChart1.ComplexData.Datasets.AddRange(new List<ComplexDataset>
+    {
+
+        new ComplexDataset
+            {
+                Data = dataSecond,
+                Label = "My Second dataset",
+                FillColor = "rgba(151,187,205,0.2)",
+                StrokeColor = "rgba(151,187,205,1)",
+                PointColor = "rgba(151,187,205,1)",
+                PointStrokeColor = "#fff",
+                PointHighlightFill = "#fff",
+                PointHighlightStroke = "rgba(151,187,205,1)",
+            }
+    });
+}
+
+<canvas id="myCanvas1" width="400" height="400"></canvas>
+@Html.CreateChart("myCanvas1", barChart1)

@@ -1,0 +1,65 @@
+﻿@using Intertravel.Utility
+@using Test_Scenario.MVC.ViewModels
+@model SearchViewModel
+@{
+    ViewBag.Title = "Search";
+    List<SelectListItem> reportDateOperator = (ViewBag.ReportDateOperator == null ? new List<SelectListItem>() : (List<SelectListItem>)ViewBag.ReportDateOperator);
+    List<SelectListItem> loanOriginationDateOperator = (ViewBag.LoanOriginationDateOperator == null ? new List<SelectListItem>() : (List<SelectListItem>)ViewBag.LoanOriginationDateOperator);
+    List<SelectListItem> ltiOperator = (ViewBag.LTIOperator == null ? new List<SelectListItem>() : (List<SelectListItem>)ViewBag.LTIOperator);
+    List<SelectListItem> borrowerBirthDateOperator = (ViewBag.BorrowerBirthDateOperator == null ? new List<SelectListItem>() : (List<SelectListItem>)ViewBag.BorrowerBirthDateOperator);
+    List<SelectListItem> employmentStatusOperator = (ViewBag.EmploymentStatusOperator == null ? new List<SelectListItem>() : (List<SelectListItem>)ViewBag.EmploymentStatusOperator);
+    List<SelectListItem> indexedDtiOperator = (ViewBag.IndexedDTIOperator == null ? new List<SelectListItem>() : (List<SelectListItem>)ViewBag.IndexedDTIOperator);
+    List<SelectListItem> originalLtvOperator = (ViewBag.OriginalLTVOperator == null ? new List<SelectListItem>() : (List<SelectListItem>)ViewBag.OriginalLTVOperator);
+    List<SelectListItem> indexedLtfvOperator = (ViewBag.IndexedLTFVOperator == null ? new List<SelectListItem>() : (List<SelectListItem>)ViewBag.IndexedLTFVOperator);
+}
+<style>
+    .searchWidth {
+        max-width: 150px;
+    }
+</style>
+<table class="table table-condensed">
+    <tr>
+        <td class="searchWidth"><b>@Html.LabelFor(model => model.ReportDate, new { @class = "control-label" })</b></td>
+        <td class="searchWidth"> @Html.DropDownList("OperatorReportDate", reportDateOperator, new { @class = "form-control" })</td>
+        <td class="searchWidth">@Html.EditorFor(model => model.ReportDate, new { htmlattributes = new { @class = "input-small form-control" } })</td>
+    </tr>
+    <tr>
+        <td class="searchWidth"><b>@Html.LabelFor(model => model.LoanOriginationDate, new { @class = "control-label" })</b></td>
+        <td class="searchWidth"> @Html.DropDownList("OperatorLoanOriginationDate", loanOriginationDateOperator, new { @class = "form-control" })</td>
+        <td class="searchWidth">@Html.EditorFor(model => model.LoanOriginationDate, new { htmlattributes = new { @class = "input-small form-control" } })</td>
+    </tr>
+    <tr>
+        <td class="searchWidth"><b>@Html.LabelFor(model => model.LTI, new { @class = "control-label" })</b></td>
+        <td class="searchWidth"> @Html.DropDownList("LTIOperator", ltiOperator, new { @class = "form-control" })</td>
+        <td class="searchWidth">@Html.EditorFor(model => model.LTI, new { htmlattributes = new { @class = "input-small form-control" } })</td>
+    </tr>
+    <tr>
+        <td class="searchWidth"><b>@Html.LabelFor(model => model.BorrowerBirthDate, new { @class = "control-label" })</b></td>
+        <td class="searchWidth"> @Html.DropDownList("OperatorBorrowerBirthDate", borrowerBirthDateOperator, new { @class = "form-control" })</td>
+        <td class="searchWidth">@Html.EditorFor(model => model.BorrowerBirthDate, new { htmlattributes = new { @class = "input-small form-control" } })</td>
+    </tr>
+    <tr>
+        <td class="searchWidth"><b>@Html.LabelFor(model => model.EmploymentStatus, new { @class = "control-label" })</b></td>
+        <td class="searchWidth"> @Html.DropDownList("OperatorEmploymentStatus", employmentStatusOperator, new { @class = "form-control" })</td>
+        <td class="searchWidth">@Html.EditorFor(model => model.EmploymentStatus, new { htmlattributes = new { @class = "input-small form-control" } })</td>
+    </tr>
+    
+    <tr>
+        <td class="searchWidth"><b>@Html.LabelFor(model => model.IndexedDTI, new { @class = "control-label" })</b></td>
+        <td class="searchWidth"> @Html.DropDownList("IndexedDTIOperator", indexedDtiOperator, new { @class = "form-control" })</td>
+        <td class="searchWidth">@Html.EditorFor(model => model.IndexedDTI, new { htmlattributes = new { @class = "input-small form-control" } })</td>
+    </tr>
+    
+    <tr>
+        <td class="searchWidth"><b>@Html.LabelFor(model => model.OriginalLTV, new { @class = "control-label" })</b></td>
+        <td class="searchWidth"> @Html.DropDownList("OriginalLTVOperator", originalLtvOperator, new { @class = "form-control" })</td>
+        <td class="searchWidth">@Html.EditorFor(model => model.OriginalLTV, new { htmlattributes = new { @class = "input-small form-control" } })</td>
+    </tr>
+    
+    <tr>
+        <td class="searchWidth"><b>@Html.LabelFor(model => model.IndexedLTFV, new { @class = "control-label" })</b></td>
+        <td class="searchWidth"> @Html.DropDownList("IndexedLTFVOperator", indexedLtfvOperator, new { @class = "form-control" })</td>
+        <td class="searchWidth">@Html.EditorFor(model => model.IndexedLTFV, new { htmlattributes = new { @class = "input-small form-control" } })</td>
+    </tr>
+
+</table>

@@ -1,0 +1,121 @@
+﻿@using Intertravel.Utility
+@using Test_Scenario.MVC.ViewModels
+@model AggregatedViewModel
+@{
+    ViewBag.Title = "Export";
+    Layout = "~/Views/Shared/_PdfLayout.cshtml";
+}
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OriginalPrincipalBalance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DTI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LTI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalIncome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndexedDTI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndexedLTI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndexedTotalIncome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentInterestRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OriginalLTV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OriginalLTFV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OriginalForeclosureValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndexedLTFV)
+        </th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(model => model.OriginalPrincipalBalance)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.DTI)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.LTI)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.TotalIncome)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.IndexedDTI)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.IndexedLTI)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.IndexedTotalIncome)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.CurrentInterestRate)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.OriginalLTV)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.OriginalLTFV)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.OriginalForeclosureValue)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.IndexedLTFV)
+        </td>
+    </tr>
+</table>
+<br />
+
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $("#btnClearAll").click(function () {
+                $('#ReportDate').val('null');
+                $('#OperatorReportDate').val('AND');
+
+                $('#LoanOriginationDate').val('null');
+                $('#OperatorLoanOriginationDate').val('AND');
+
+                $('#LTI').val('');
+                $('#LTIOperator').val('AND');
+
+                $('#BorrowerBirthDate').val('null');
+                $('#OperatorBorrowerBirthDate').val('AND');
+
+                $('#EmploymentStatus').val('');
+                $('#OperatorEmploymentStatus').val('AND');
+
+                $('#IndexedDTI').val('');
+                $('#IndexedDTIOperator').val('AND');
+
+                $('#OriginalLTV').val('');
+                $('#OriginalLTVOperator').val('AND');
+
+                $('#IndexedLTFV').val('');
+                $('#IndexedLTFVOperator').val('AND');
+            });
+        });
+    </script>
+}

@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Test_ScenarioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Test_Scenario.dbo.HISTORY' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="HISTORY">
+    <Key>
+      <PropertyRef Name="M_PoolID" />
+      <PropertyRef Name="M_LoanID" />
+      <PropertyRef Name="ReportDate" />
+    </Key>
+    <Property Name="M_PoolID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="M_LoanID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="ReportDate" Type="date" Nullable="false" />
+    <Property Name="CurrentPrincipalBalance" Type="float" />
+    <Property Name="CurrentLTV" Type="float" />
+    <Property Name="LoanAge" Type="float" />
+    <Property Name="CurrentPropertyVal" Type="varchar(max)" />
+    <Property Name="Savings" Type="float" />
+    <Property Name="CurrentIndexedLTV" Type="float" />
+    <Property Name="DelinquencyStatus" Type="float" />
+    <Property Name="BorrowerExposure" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="NoBorrowers" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Test_Scenario.dbo.HISTORY_RATES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="HISTORY_RATES">
+    <Key>
+      <PropertyRef Name="M_PoolID" />
+      <PropertyRef Name="M_LoanID" />
+      <PropertyRef Name="ReportDate" />
+    </Key>
+    <Property Name="M_PoolID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="M_LoanID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="ReportDate" Type="date" Nullable="false" />
+    <Property Name="CurrentRateType" Type="nvarchar" MaxLength="200" />
+    <Property Name="CurrentInterestRate" Type="float" />
+    <Property Name="CurrentDTI" Type="float" />
+    <Property Name="CurrentLTFV" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Test_Scenario.dbo.INCOME' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="INCOME">
+    <Key>
+      <PropertyRef Name="M_PoolID" />
+      <PropertyRef Name="M_LoanID" />
+    </Key>
+    <Property Name="M_PoolID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="M_LoanID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="DTI" Type="float" />
+    <Property Name="LTI" Type="float" />
+    <Property Name="SelfCertification" Type="varchar" MaxLength="45" />
+    <Property Name="EmploymentStatus" Type="varchar" MaxLength="45" />
+    <Property Name="TotalIncome" Type="float" />
+    <Property Name="BorrowerBirthDate" Type="date" />
+    <Property Name="IndexedDTI" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="IndexedLTI" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="IndexedTotalIncome" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="MaxBorrowerIncome" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="BorrowerTotalIncome" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="LivingExpenses" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CurrentInterestShock" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="MonthlyNetIncome" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="MonthlyMortgageInterest" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="MonthlyMortgagePrincipal" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="MonthlyIncomeBuffer" Type="decimal" Precision="15" Scale="2" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Test_Scenario.dbo.MASTER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MASTER">
+    <Key>
+      <PropertyRef Name="M_PoolID" />
+      <PropertyRef Name="M_LoanID" />
+    </Key>
+    <Property Name="M_PoolID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="M_LoanID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="M_BorrowerID" Type="varchar" MaxLength="45" />
+    <Property Name="ClassType" Type="varchar" MaxLength="45" />
+    <Property Name="OriginalPrincipalBalance" Type="float" />
+    <Property Name="LoanOriginationDate" Type="date" />
+    <Property Name="MaturityDate" Type="date" />
+    <Property Name="TermToMaturity" Type="float" />
+    <Property Name="Guarantee" Type="float" />
+    <Property Name="LoanTypeIndicator" Type="int" />
+    <Property Name="Sector" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Test_Scenario.dbo.MORTGAGE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MORTGAGE">
+    <Key>
+      <PropertyRef Name="M_PoolID" />
+      <PropertyRef Name="M_LoanID" />
+    </Key>
+    <Property Name="M_PoolID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="M_LoanID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="BTLStatus" Type="varchar" MaxLength="45" />
+    <Property Name="RepaymentType" Type="varchar" MaxLength="45" />
+    <Property Name="SecondLien" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Test_Scenario.dbo.RATES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="RATES">
+    <Key>
+      <PropertyRef Name="M_PoolID" />
+      <PropertyRef Name="M_LoanID" />
+    </Key>
+    <Property Name="M_PoolID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="M_LoanID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="ReversionaryDate" Type="date" />
+    <Property Name="InterestStartDate" Type="varchar" MaxLength="10" />
+    <Property Name="RemainingFixedRateTerm" Type="float" />
+    <Property Name="PrincipalStartDate" Type="date" />
+    <Property Name="OriginalFixedRateTerm" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Test_Scenario.dbo.SECURITIZATION' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SECURITIZATION">
+    <Key>
+      <PropertyRef Name="M_PoolID" />
+      <PropertyRef Name="M_LoanID" />
+    </Key>
+    <Property Name="M_PoolID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="M_LoanID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="LifetimeBasePD" Type="float" />
+    <Property Name="LifetimeBasePDOverride" Type="float" />
+    <Property Name="Multiple_NEW" Type="float" />
+    <Property Name="LifetimeBasePPOverride" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Test_Scenario.dbo.VALUATION' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VALUATION">
+    <Key>
+      <PropertyRef Name="M_PoolID" />
+      <PropertyRef Name="M_LoanID" />
+    </Key>
+    <Property Name="M_PoolID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="M_LoanID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="OriginalPropertyValue" Type="varchar(max)" />
+    <Property Name="PropertyValuationDate" Type="date" />
+    <Property Name="OriginalLTV" Type="float" />
+    <Property Name="OriginalLTFV" Type="float" />
+    <Property Name="OriginalForeclosureValue" Type="float" />
+    <Property Name="IndexedLTFV" Type="float" />
+    <Property Name="CurrentForeclosureValue" Type="float" />
+    <Property Name="CurrentPropertyValue" Type="float" />
+    <Property Name="CurrentNetPropertyValue" Type="float" />
+    <Property Name="ForeclosureResidualDebtEstimate" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="LoanLossEstimate" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="LoanPrice" Type="float" />
+  </EntityType>
+  <EntityContainer Name="Test_ScenarioModelStoreContainer">
+    <EntitySet Name="HISTORY" EntityType="Self.HISTORY" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [HISTORY].[M_PoolID] AS [M_PoolID], 
+    [HISTORY].[M_LoanID] AS [M_LoanID], 
+    [HISTORY].[ReportDate] AS [ReportDate], 
+    [HISTORY].[CurrentPrincipalBalance] AS [CurrentPrincipalBalance], 
+    [HISTORY].[CurrentLTV] AS [CurrentLTV], 
+    [HISTORY].[LoanAge] AS [LoanAge], 
+    [HISTORY].[CurrentPropertyVal] AS [CurrentPropertyVal], 
+    [HISTORY].[Savings] AS [Savings], 
+    [HISTORY].[CurrentIndexedLTV] AS [CurrentIndexedLTV], 
+    [HISTORY].[DelinquencyStatus] AS [DelinquencyStatus], 
+    [HISTORY].[BorrowerExposure] AS [BorrowerExposure], 
+    [HISTORY].[NoBorrowers] AS [NoBorrowers]
+    FROM [dbo].[HISTORY] AS [HISTORY]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="HISTORY_RATES" EntityType="Self.HISTORY_RATES" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [HISTORY_RATES].[M_PoolID] AS [M_PoolID], 
+    [HISTORY_RATES].[M_LoanID] AS [M_LoanID], 
+    [HISTORY_RATES].[ReportDate] AS [ReportDate], 
+    [HISTORY_RATES].[CurrentRateType] AS [CurrentRateType], 
+    [HISTORY_RATES].[CurrentInterestRate] AS [CurrentInterestRate], 
+    [HISTORY_RATES].[CurrentDTI] AS [CurrentDTI], 
+    [HISTORY_RATES].[CurrentLTFV] AS [CurrentLTFV]
+    FROM [dbo].[HISTORY_RATES] AS [HISTORY_RATES]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="INCOME" EntityType="Self.INCOME" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [INCOME].[M_PoolID] AS [M_PoolID], 
+    [INCOME].[M_LoanID] AS [M_LoanID], 
+    [INCOME].[DTI] AS [DTI], 
+    [INCOME].[LTI] AS [LTI], 
+    [INCOME].[SelfCertification] AS [SelfCertification], 
+    [INCOME].[EmploymentStatus] AS [EmploymentStatus], 
+    [INCOME].[TotalIncome] AS [TotalIncome], 
+    [INCOME].[BorrowerBirthDate] AS [BorrowerBirthDate], 
+    [INCOME].[IndexedDTI] AS [IndexedDTI], 
+    [INCOME].[IndexedLTI] AS [IndexedLTI], 
+    [INCOME].[IndexedTotalIncome] AS [IndexedTotalIncome], 
+    [INCOME].[MaxBorrowerIncome] AS [MaxBorrowerIncome], 
+    [INCOME].[BorrowerTotalIncome] AS [BorrowerTotalIncome], 
+    [INCOME].[LivingExpenses] AS [LivingExpenses], 
+    [INCOME].[CurrentInterestShock] AS [CurrentInterestShock], 
+    [INCOME].[MonthlyNetIncome] AS [MonthlyNetIncome], 
+    [INCOME].[MonthlyMortgageInterest] AS [MonthlyMortgageInterest], 
+    [INCOME].[MonthlyMortgagePrincipal] AS [MonthlyMortgagePrincipal], 
+    [INCOME].[MonthlyIncomeBuffer] AS [MonthlyIncomeBuffer]
+    FROM [dbo].[INCOME] AS [INCOME]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MASTER" EntityType="Self.MASTER" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MASTER].[M_PoolID] AS [M_PoolID], 
+    [MASTER].[M_LoanID] AS [M_LoanID], 
+    [MASTER].[M_BorrowerID] AS [M_BorrowerID], 
+    [MASTER].[ClassType] AS [ClassType], 
+    [MASTER].[OriginalPrincipalBalance] AS [OriginalPrincipalBalance], 
+    [MASTER].[LoanOriginationDate] AS [LoanOriginationDate], 
+    [MASTER].[MaturityDate] AS [MaturityDate], 
+    [MASTER].[TermToMaturity] AS [TermToMaturity], 
+    [MASTER].[Guarantee] AS [Guarantee], 
+    [MASTER].[LoanTypeIndicator] AS [LoanTypeIndicator], 
+    [MASTER].[Sector] AS [Sector]
+    FROM [dbo].[MASTER] AS [MASTER]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MORTGAGE" EntityType="Self.MORTGAGE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MORTGAGE].[M_PoolID] AS [M_PoolID], 
+    [MORTGAGE].[M_LoanID] AS [M_LoanID], 
+    [MORTGAGE].[BTLStatus] AS [BTLStatus], 
+    [MORTGAGE].[RepaymentType] AS [RepaymentType], 
+    [MORTGAGE].[SecondLien] AS [SecondLien]
+    FROM [dbo].[MORTGAGE] AS [MORTGAGE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RATES" EntityType="Self.RATES" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [RATES].[M_PoolID] AS [M_PoolID], 
+    [RATES].[M_LoanID] AS [M_LoanID], 
+    [RATES].[ReversionaryDate] AS [ReversionaryDate], 
+    [RATES].[InterestStartDate] AS [InterestStartDate], 
+    [RATES].[RemainingFixedRateTerm] AS [RemainingFixedRateTerm], 
+    [RATES].[PrincipalStartDate] AS [PrincipalStartDate], 
+    [RATES].[OriginalFixedRateTerm] AS [OriginalFixedRateTerm]
+    FROM [dbo].[RATES] AS [RATES]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SECURITIZATION" EntityType="Self.SECURITIZATION" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SECURITIZATION].[M_PoolID] AS [M_PoolID], 
+    [SECURITIZATION].[M_LoanID] AS [M_LoanID], 
+    [SECURITIZATION].[LifetimeBasePD] AS [LifetimeBasePD], 
+    [SECURITIZATION].[LifetimeBasePDOverride] AS [LifetimeBasePDOverride], 
+    [SECURITIZATION].[Multiple_NEW] AS [Multiple_NEW], 
+    [SECURITIZATION].[LifetimeBasePPOverride] AS [LifetimeBasePPOverride]
+    FROM [dbo].[SECURITIZATION] AS [SECURITIZATION]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VALUATION" EntityType="Self.VALUATION" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VALUATION].[M_PoolID] AS [M_PoolID], 
+    [VALUATION].[M_LoanID] AS [M_LoanID], 
+    [VALUATION].[OriginalPropertyValue] AS [OriginalPropertyValue], 
+    [VALUATION].[PropertyValuationDate] AS [PropertyValuationDate], 
+    [VALUATION].[OriginalLTV] AS [OriginalLTV], 
+    [VALUATION].[OriginalLTFV] AS [OriginalLTFV], 
+    [VALUATION].[OriginalForeclosureValue] AS [OriginalForeclosureValue], 
+    [VALUATION].[IndexedLTFV] AS [IndexedLTFV], 
+    [VALUATION].[CurrentForeclosureValue] AS [CurrentForeclosureValue], 
+    [VALUATION].[CurrentPropertyValue] AS [CurrentPropertyValue], 
+    [VALUATION].[CurrentNetPropertyValue] AS [CurrentNetPropertyValue], 
+    [VALUATION].[ForeclosureResidualDebtEstimate] AS [ForeclosureResidualDebtEstimate], 
+    [VALUATION].[LoanLossEstimate] AS [LoanLossEstimate], 
+    [VALUATION].[LoanPrice] AS [LoanPrice]
+    FROM [dbo].[VALUATION] AS [VALUATION]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
